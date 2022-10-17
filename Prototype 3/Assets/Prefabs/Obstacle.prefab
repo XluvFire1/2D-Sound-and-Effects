@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3007732601442098327}
   - component: {fileID: 3007732601442098326}
+  - component: {fileID: -4394580802157688695}
   - component: {fileID: 3007732601442098325}
   - component: {fileID: 3007732601442098324}
   m_Layer: 0
-  m_Name: obsticle
-  m_TagString: Untagged
+  m_Name: Obstacle
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,11 +73,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1093284857
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2abadb80784e17f43815d9af8c25c599, type: 3}
-  m_Color: {r: 0, g: 0.45917082, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,6 +87,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4394580802157688695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007732601442098321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ef8973e560c29488cdce389f0e84bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBounds: -15
 --- !u!61 &3007732601442098325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,4 +138,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6a0687214bba44998e173eb37dfdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 20

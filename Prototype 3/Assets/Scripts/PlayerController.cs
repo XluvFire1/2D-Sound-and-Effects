@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpForce = 10;
+    public float jumpForce = 13;
     public bool isOnGround = false;
+    public bool isGameOver = false;
 
     private Rigidbody2D _playerRB;
     private Animator _playerAnim;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
+        if(Input.GetKeyDown(KeyCode.UpArrow) && isOnGround && !isGameOver)
         {
             _playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
@@ -34,6 +35,10 @@ public class PlayerController : MonoBehaviour
         {
             isOnGround = true;
             _playerAnim.SetBool("IsOnGround", true);
+        }
+        else if(other.gameObject.CompareTag("Obstacle"))
+        {
+            isGameOver = true;
         }
     }
 }
