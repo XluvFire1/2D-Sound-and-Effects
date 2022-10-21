@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 13
   isOnGround: 0
-  isGameOver: 1
+  isGameOver: 0
   jumpSound: {fileID: 8300000, guid: 07e67f8117900ba4c9391208fe01db94, type: 3}
   crashSound: {fileID: 8300000, guid: ba7874e13a8c14f40a073e2d0ac73727, type: 3}
 --- !u!95 &180173836
